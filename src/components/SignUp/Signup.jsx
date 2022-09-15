@@ -1,6 +1,14 @@
 import "./Signup.css"
 import login from "../../assets/Signup/log.svg"
-import Signin from "../../assets/Signup/register.svg"
+import Signin from "../../assets/Signup/sign.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faGoogle, faLinkedinIn, } from "@fortawesome/free-brands-svg-icons"
+// import {faLock, faUser, faEnvelope, } from "@fortawesome/free-solid-svg-icons"
+import {GoogleLogin} from "react-google-login"
+import React, {useState} from "react"
+
+
+const clientId = "416173177198-s29fioc3j8kia1fviqh1j1bbfbldghun.apps.googleusercontent.com"
 
 function Signup() {
 
@@ -20,6 +28,14 @@ function Signup() {
         });
     }
 
+    const onSuccess = (res) => {
+        console.log("Login Success! Current user: ", res.profileObj)
+    }
+
+    const onFailure = (res) => {
+        console.log("Login Failed! res: ", res)
+    }
+
     return (
         <div className="container">
             <div className="forms-container">
@@ -37,17 +53,25 @@ function Signup() {
                         <input type="submit" value="Login" className="btn solid" />
                         <p className="social-text">Or Sign in with social platforms</p>
                         <div className="social-media">
+                            {/* <a href="#" className="social-icon">
+                                <FontAwesomeIcon icon={faFacebookF} /> */}
+                            {/* </a> */}
                             <a href="#" className="social-icon">
-                                <i className="fab fa-facebook-f"></i>
+                            <FontAwesomeIcon icon={faGoogle} />
+                            <GoogleLogin
+                                clientId={clientId}
+                                buttonText="Login"
+                                onSuccess={onSuccess}
+                                onFailure={onFailure}
+                                cookiePolicy={"single_host_origin"}
+                                isSignedIn={true}
+                            />
                             </a>
                             <a href="#" className="social-icon">
-                                <i className="fab fa-twitter"></i>
+                            <FontAwesomeIcon icon={faGithub} />
                             </a>
                             <a href="#" className="social-icon">
-                                <i className="fab fa-google"></i>
-                            </a>
-                            <a href="#" className="social-icon">
-                                <i className="fab fa-linkedin-in"></i>
+                            <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                         </div>
                     </form>
@@ -68,17 +92,15 @@ function Signup() {
                         <input type="submit" className="btn" value="Sign up" />
                         <p className="social-text">Or Sign up with social platforms</p>
                         <div className="social-media">
-                            <a href="#" className="social-icon">
-                                <i className="fab fa-facebook-f"></i>
+                        <a href="#" className="social-icon">
+                            <FontAwesomeIcon icon={faGoogle} />
+                            
                             </a>
                             <a href="#" className="social-icon">
-                                <i className="fab fa-twitter"></i>
+                            <FontAwesomeIcon icon={faGithub} />
                             </a>
                             <a href="#" className="social-icon">
-                                <i className="fab fa-google"></i>
-                            </a>
-                            <a href="#" className="social-icon">
-                                <i className="fab fa-linkedin-in"></i>
+                            <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
                         </div>
                     </form>
@@ -97,7 +119,9 @@ function Signup() {
                             Sign up
                         </button>
                     </div>
-                    <img src={login} className="image" alt="" />
+                    <img src={login
+                    
+                    } className="image" alt="" />
                 </div>
                 <div className="panel right-panel">
                     <div className="content">
