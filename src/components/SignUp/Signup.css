@@ -6,7 +6,8 @@
       box-sizing: border-box;
     }
     
-    body,
+    
+   
     input {
       font-family: "Poppins", sans-serif;
     }
@@ -65,6 +66,7 @@
       color: #444;
       margin-bottom: 10px;
     }
+    
     
     .input-field {
       max-width: 380px;

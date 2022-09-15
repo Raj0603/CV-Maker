@@ -52,13 +52,27 @@ function Signup() {
                         </div>
                         <input type="submit" value="Login" className="btn solid" />
                         <p className="social-text">Or Sign in with social platforms</p>
+                        
+                    
                         <div className="social-media">
                             {/* <a href="#" className="social-icon">
                                 <FontAwesomeIcon icon={faFacebookF} /> */}
                             {/* </a> */}
+
                             <a href="#" className="social-icon">
-                            <FontAwesomeIcon icon={faGoogle} />
-                            <GoogleLogin
+                            <FontAwesomeIcon icon={faGoogle}
+                               clientId={clientId}
+                               buttonText="Login"
+                               onSuccess={onSuccess}
+                               onFailure={onFailure}
+                               cookiePolicy={"single_host_origin"}
+                               isSignedIn={true}
+                            
+                            
+                            
+                            />
+                                      <GoogleLogin
+                             
                                 clientId={clientId}
                                 buttonText="Login"
                                 onSuccess={onSuccess}
@@ -70,6 +84,7 @@ function Signup() {
                             <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faGithub} />
                             </a>
+
                             <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                             </a>
@@ -93,6 +108,7 @@ function Signup() {
                         <p className="social-text">Or Sign up with social platforms</p>
                         <div className="social-media">
                         <a href="#" className="social-icon">
+                       
                             <FontAwesomeIcon icon={faGoogle} />
                             
                             </a>
