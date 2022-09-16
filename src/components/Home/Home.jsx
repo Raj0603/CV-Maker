@@ -1,5 +1,5 @@
 
-import React, {useState} from "react"
+import React, {useState} from "react";
 import Nav from "../Navbar/Navbar";
 import Mid from "../Mid/Mid";
 
@@ -11,17 +11,11 @@ export default function Home() {
     return(
        
         <>
-<Nav />
+<Nav/>
 
 {/* <Mid/> */}
         
-
-        
-   
-  
         </>
-
-
-        
+    
     );
 }

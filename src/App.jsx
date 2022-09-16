@@ -7,6 +7,7 @@ import {gapi} from "gapi-script"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './components/Home/Home';
+import Signup from './components/SignUp/Signup';
 
 
 const clientId = "416173177198-s29fioc3j8kia1fviqh1j1bbfbldghun.apps.googleusercontent.com"
@@ -28,8 +29,8 @@ function App() {
   return (
     <div className="App">
   
-
-<Home/>
+   <Signup/> 
+  
 
       {/* <Routes>
         <Route path="/" element={<Home />}>
