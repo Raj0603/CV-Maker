@@ -56,9 +56,10 @@ function Signup() {
                             {/* <a href="#" className="social-icon">
                                 <FontAwesomeIcon icon={faFacebookF} /> */}
                             {/* </a> */}
-                            <a href="#" className="social-icon">
-                            <FontAwesomeIcon icon={faGoogle} />
+                            {/* <a href="#" className="social-icon">
+                            <FontAwesomeIcon icon={faGoogle} /> */}
                             <GoogleLogin
+                                className="gbtn"
                                 clientId={clientId}
                                 buttonText="Login"
                                 onSuccess={onSuccess}
@@ -66,13 +67,13 @@ function Signup() {
                                 cookiePolicy={"single_host_origin"}
                                 isSignedIn={true}
                             />
-                            </a>
+                            {/* </a>
                             <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faGithub} />
                             </a>
                             <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faLinkedinIn} />
-                            </a>
+                            </a> */}
                         </div>
                     </form>
                     <form action="#" className="sign-up-form">
@@ -92,7 +93,17 @@ function Signup() {
                         <input type="submit" className="btn" value="Sign up" />
                         <p className="social-text">Or Sign up with social platforms</p>
                         <div className="social-media">
-                        <a href="#" className="social-icon">
+
+                        <GoogleLogin
+                                className="gbtn"
+                                clientId={clientId}
+                                buttonText="Login"
+                                onSuccess={onSuccess}
+                                onFailure={onFailure}
+                                cookiePolicy={"single_host_origin"}
+                                isSignedIn={true}
+                            />
+                        {/* <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faGoogle} />
                             
                             </a>
@@ -101,7 +112,7 @@ function Signup() {
                             </a>
                             <a href="#" className="social-icon">
                             <FontAwesomeIcon icon={faLinkedinIn} />
-                            </a>
+                            </a> */}
                         </div>
                     </form>
                 </div>

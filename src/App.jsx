@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Signup from './components/SignUp/Signup';
+// import Navbar from './components/Navbar/Navbar'
 // import Signup from "./components/SignUp/Signup"
 import {useEffect} from "react"
 import {gapi} from "gapi-script"
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Signup/>
+      {/* <Navbar/> */}
     </div>
   );
 }
