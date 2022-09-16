@@ -398,3 +398,8 @@
         left: 50%;
       }
     }
+
+  .gbtn{
+    width: 250px;
+    background-color: #63898C;
+  }
