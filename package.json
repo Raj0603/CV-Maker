@@ -15,10 +15,15 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gapi-script": "^1.2.0",
+    "jquery": "^3.6.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-google-login": "^5.2.2",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
+    "react-router-dom": "^6.4.0",
+    "react-script-tag": "^1.1.2",
     "vite-svg-loader": "^3.6.0"
   },
   "devDependencies": {

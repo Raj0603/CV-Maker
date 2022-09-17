@@ -1,11 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
-// import Signup from './components/SignUp/Signup';
+ import Signup from './components/SignUp/Signup';
 import Navbar from './components/Navbar/Navbar'
 // import Signup from "./components/SignUp/Signup"
-import Home from "./pages/Home/Home"
+
 import {useEffect} from "react"
 import {gapi} from "gapi-script"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+import Home from './pages/Home/Home';
+
+
 
 const clientId = "416173177198-s29fioc3j8kia1fviqh1j1bbfbldghun.apps.googleusercontent.com"
 
@@ -24,12 +30,26 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <Navbar/>
-      {/* <Signup/> */}
 
-      <Home/>
-    </div>
+    <>
+
+    
+    <div className="App">
+  
+   <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/Signup' element={<Signup />}></Route>
+          <Route path='/Home' element={<Home />}></Route>
+        </Routes>
+  
+      </Router>
+
+    
+
+      </div>
+      
+      </>
   );
 }
 
