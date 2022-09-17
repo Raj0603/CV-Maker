@@ -6,18 +6,38 @@ function Mid(){
     return(
  
 
-      <div className="card111">
-  
-      <h1>John Doe</h1>
-      <p className="title11">Begin Developing Your CV using the best template
-      From our assorted collection</p>
-     
-      <div style="margin: 24px 0;">
+      <div class="card text-center" style={{ marginbottom: "0px" }}>
+      <div class="card-footer text-muted">
+
+
+
+        <h2>Bye</h2>
+
+        <div class='container165 text-center' style={{textalign:"center"}}>
+          <h3>Momentary Quote</h3>
+          <br />
+
+                    
+          <Helmet>
+
+            <script isHydrating={true} type="text/javascript"
+              src="quo.jsx" />
+
+          </Helmet>
+
+          <p id='random_quote'>
+
+          </p>
+        </div>
+
 
       </div>
-      <p><button className="button111">Contact</button></p>
+
+
     </div>
-    
+
+
+
   
 
     );

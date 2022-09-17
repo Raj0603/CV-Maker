@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-// import Signup from './components/SignUp/Signup';
+ import Signup from './components/SignUp/Signup';
 import Navbar from './components/Navbar/Navbar'
 // import Signup from "./components/SignUp/Signup"
-import Home from "./pages/Home/Home"
+
 import {useEffect} from "react"
 import {gapi} from "gapi-script"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

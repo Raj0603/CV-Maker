@@ -2,24 +2,20 @@
 import React, {useState} from "react";
 
 
-import Signup from "../SignUp/Signup";
-import Mid from "../Mid/Mid";
 
+import Homi from "../../pages/Homi/Homi";
 
 import Navbar from "../Navbar/Navbar";
 import { BrowserRouter, Routes, Route , Router } from "react-router-dom";
+import Mid from "../Mid/Mid";
 
 
 export default function Home() {
 
       return(
     <>
-    <Navbar >
- 
-    </Navbar>
-
-    
-  
+    <Navbar />
+   
     
     </>
    
