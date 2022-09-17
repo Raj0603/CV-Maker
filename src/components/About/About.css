@@ -1,0 +1,20 @@
+.about-header{
+    /* color:#e0f4f5 */
+    color: #a7d1d2;
+    font-size: 75px;
+    background-color: #033540;
+    padding:0px;
+}
+.about-desc{
+    color: #334041;
+    font-size: 40px;
+    padding:50px;
+}
+.info{
+    display:flex;
+    background-color: "grey"
+}
+.about-img{
+    max-width: 100%;
+    vertical-align: middle;
+}

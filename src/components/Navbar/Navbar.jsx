@@ -17,7 +17,7 @@ import img5 from "../../assets/Slidebar/sb6.png"
 
 
 
-import Mid from "../Mid/Mid";
+// import Mid from "../Mid/Mid";
 
 function Navbar() {
 	const navRef = useRef();
@@ -34,9 +34,9 @@ function Navbar() {
 					<a className="a" href="/#">Home</a>
 					<a className="a" href="/#">Build CV</a>
 					<a className="a" href="/#">Contact Us</a>
-					<a className="a" href="/#">About Us</a>
-					<div className="aaa" style={{ marginLeft:"580px" }}>
-						<a className="a"><Link className="a" to="/Signup"><FaUser /> Login/Register</Link></a>
+					<Link className="a" to="/About">About Us</Link>
+					<div className="aaa" style={{ float: "right" }}>
+						 <Link className="a" to="/Signup"><FaUser /> Login/Register</Link>
 
 					</div>
 
@@ -163,4 +163,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
