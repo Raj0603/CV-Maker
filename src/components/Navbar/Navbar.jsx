@@ -2,7 +2,8 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { useRef } from "react";
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Helmet from "react-helmet";
+
+import randomQuote from "./quo.jsx";
 
 import "./Navbar.css";
 import "./Hm.css";
@@ -129,19 +130,19 @@ function Navbar() {
 
 					<h2>Momentary Quote</h2>
 
-					<div class='container165 text-center' style={{ textalign: "center" }}>
+					<div className="container165 text-center" style={{ textalign: "center" }}>
 						<h3></h3>
 						<br />
 
 
-						<Helmet>
+				
 
 							<script isHydrating={true} type="text/javascript"
-								src="quo.jsx" />
+								src={randomQuote} />
 
-						</Helmet>
+						
 
-						<p id='random_quote'>
+						<p id='random_quote' style={{textAlign:"center"}}>
 
 						</p>
 					</div>

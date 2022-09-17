@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 function randomQuote() {
   $.ajax({
       url: "https://api.forismatic.com/api/1.0/?",
@@ -19,3 +21,6 @@ $(function() {
 $("button").click(function(){
   randomQuote();
 });
+
+
+export default randomQuote;

@@ -3,11 +3,11 @@ import React, {useState} from "react";
 
 
 
-import Homi from "../../pages/Homi/Homi";
 
-import Navbar from "../Navbar/Navbar";
+
+import Navbar from "../../components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route , Router } from "react-router-dom";
-import Mid from "../Mid/Mid";
+import Mid from "../../components/Mid/Mid";
 
 
 export default function Home() {

@@ -20,7 +20,7 @@
 .slider-frame{
     display: flex;
     width: calc(400px * 10);
-    animation: scroll 2s linear infinite;
+    animation: scroll 8s linear infinite;
 
 }
 
