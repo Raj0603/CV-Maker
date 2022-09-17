@@ -1,65 +1,129 @@
-
-
-
-
-//import  Styles  from "./Navbar.module.css";
-
-
-import React, {useState} from "react";
-
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { useRef } from "react";
+import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-function Nav() {
-    return(
-        <>
-        <nav className= {`${Styles.navbar} ${Styles.navbar-expand-lg} ${Styles.navbar-light}`}>
-            <div className={Styles.container}>
-                <a className={`${Styles.navbar-brand} ${Styles.fw-bold} ${Styles.text-gunmetal}`} href="#">
-                    <span className=""><img src="https://adityawahyuramadhan.github.io/hosted-assets/Freelanco/logo.svg" alt="" className="img-fluid" /></span>
-                    Freelanco
-                </a>
-                <button className={`${Styles.navbar-toggler}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className={`${Styles.navbar-toggler-icon}`}></span>
-                </button>
-                <div className={`${collapse} ${Styles.navbar-collapse}`} id="navbarNav">
-                    <ul className={`${Styles.navbar-nav} ms-auto mb-2 mb-lg-0 fw-medium`}>
-                        <li className={Styles.nav-item}>
-                            <a className={`${Styles.nav-link} ${Styles.active}`} aria-current="page" href="#">Home</a>
-                        </li>
-                        <li className={Styles.nav-item}>
-                            <a className={Styles.nav-link} href="#">Pricing</a>
-                        </li>
-                        <li className={Styles.nav-item}>
-                            <a className={Styles.nav-link} href="#">Services</a>
-                        </li>
-                        <li className={Styles.nav-item}>
-                            <a className={Styles.nav-link} href="#">Blog</a>
-                        </li>
-                        <li className={Styles.nav-item}>
-                            <a className={Styles.nav-link} href="#">Contact</a>
-                        </li>
-                        <li className={Styles.nav-item}>
-                                {/*                             
-                        <Link className="nav-link btn gunmetal text-white fw-medium" to = "/Signup" >
-                              Login
-                              </Link> */}
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
+import Helmet from "react-helmet";
+import "./Navbar.css";
 
 
 
-        </nav>
+import Mid from "../Mid/Mid";
+
+function Navbar() {
+	const navRef = useRef();
+
+	const showNavbar = () => {
+		navRef.current.classList.toggle("responsive_nav");
+	};
+
+	return (
+		<>
+		<header className="header">
+			<h3>LOGO</h3>
+			<nav className="nav" ref={navRef}>
+				<a className="a" href="/#">Home</a>
+				<a className="a" href="/#">Build CV</a>
+				<a className="a" href="/#">Contact Us</a>
+				<a className="a" href="/#">About Us</a>
+                <div className="aaa" style={{marginRight:"500px"}}>
+				<a className="a" ><Link className="a" to="/Signup"><FaUser/> Login/Register</Link></a>
+				</div>
+
+
+
+
+			<button
+				className="nav-btn nav-close-btn"
+				onClick={showNavbar}>
+				<FaTimes />
+			</button>
+</nav>
+		<button className="nav-btn" onClick={showNavbar}>
+				<FaBars />
+			</button>
            
 
 
-            </>
+		</header>
+		<br/>
+		<br/>
+		<br/>   
+		<br/>
+		<br/>
+      <div>
+		<header class="jumbotron27 jumbotron-fluid">
+				<div class="container-fluid text-center">
+					<h1 class="display-3">The Best Solution for Your Business</h1><br/>
+					<p class="lead pb-4">We help you maximize Your Static performance and build a healthy Resume</p>
+					<hr/><br/>
+					<p><a href="#" class="button111" role="button">Start Building</a></p>
+				</div>
+			</header>
+			</div>
+
+			<br/>
+			<br/>   
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	
+			<div class="card text-center" style={{ marginbottom: "0px" }}>
+				<div class="card-footer text-muted">
 
 
-    );
+
+					<h2>Bye</h2>
+
+					<div class='container165 text-center' style={{textalign:"center"}}>
+						<h3>Momentary Quote</h3>
+						<br />
+
+                      
+						<Helmet>
+
+							<script isHydrating={true} type="text/javascript"
+								src="quo.js" />
+
+						</Helmet>
+
+						<p id='random_quote'>
+
+						</p>
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+
+
+       
+
+		</>
+	);
 }
 
+export default Navbar;
 
-export default Nav;
