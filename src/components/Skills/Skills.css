@@ -1,26 +1,89 @@
-.skills-container{
+.skills-container {
     display: flex;
-    background-color: yellow;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
 
 }
 
-.float-child-l, .float-child-2{
-    width: 50%;
-    height: 100vh;
+.heading {
+    text-align: center;
+    font-size: xxx-large;
+    background: #a7d1d2;
+    font-weight: 500;
 }
 
-.float-child-l{
+.float-child-l,
+.float-child-r {
+    width: 50%;
+    /* height: 100vh; */
+}
+
+.float-child-l {
     background-color: aliceblue;
 }
 
-.suggestion{
-    height: 20%;
-    border: 2px solid red;
+.float-child-r {
+    background-color: #63898c;
 }
 
-.temp{
-    height: 80%;
-    border: 2px solid green;
+.suggestion {
+    height: 20%;
+    width: 100%;
+}
+
+.temp {
+    height: 100%;
+}
+
+.skills-titles {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+
+}
+
+.input {
+    width: 80%;
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+.skills-data {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+/* 
+#skills-name {
+    margin-top: 5px;
+} */
+
+#Next,
+#save {
+    align-items: center;
+    display: flex;
+}
+
+
+#Next {
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+
+}
+
+#save {
+    margin-top: 10px;
+}
+
+.suggestion-box {
+    display: flex;
+    height: 90%;
+    width: 98%;
+    background: wheat;
+    margin: 5px;
+    margin-top: 10px;
+
 }

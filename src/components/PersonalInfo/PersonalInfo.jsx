@@ -1,10 +1,14 @@
 import "./PersonalInfo.css"
 import "../All Css/Button.css"
 import "../All Css/Input.css"
+import { Link } from "react-router-dom"
 
 function PersonalInfo() {
     return (
         <>
+            <div className="heading">
+                Enter Your Personal Information
+            </div>
             <div className="ps-container">
                 <div className="float-child-l">
 
@@ -62,13 +66,13 @@ function PersonalInfo() {
                         <div className="suggestion-box">
 
                         </div>
-                    <button class="animated-button1" id="Next" type="">
+                    <Link to="./Skills" class="animated-button1" id="Next" type="">
                         <span className="span"></span>
                         <span className="span"></span>
                         <span className="span"></span>
                         <span className="span"></span>
                         Next
-                    </button>
+                    </Link>
                     </div>
 
                 </div>

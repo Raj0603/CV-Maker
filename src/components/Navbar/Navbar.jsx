@@ -67,7 +67,7 @@ function Navbar() {
 						<h1 class="display-3">The Best Solution for Your Career Establishment </h1><br />
 						<p class="lead pb-4">We help you maximize Your Static performance and build a healthy Resume</p>
 						<br /><hr /><br />
-						<p><a href="#" class="button111" role="button">Start Building</a></p>
+						<p><Link to="./PersonalInfo" href="#" class="button111" role="button">Start Building</Link></p>
 					</div>
 				</header>
 
