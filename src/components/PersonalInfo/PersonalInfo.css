@@ -1,0 +1,80 @@
+.ps-container{
+    display: flex;
+    height: 130vh;
+    width: 100%;
+
+}
+
+.float-child-l, .float-child-r{
+    width: 50%;
+    /* height: 100vh; */
+}
+
+.float-child-l{
+    background-color: aliceblue;
+}
+
+.float-child-r{
+    background-color: #63898c;
+}
+
+.suggestion{
+    height: 20%;
+    width: 100%;
+}
+
+.temp{
+    height: 100%;
+}
+
+.info-titles{
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    
+}
+
+.input{
+    width: 80%;
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+    
+}
+
+.info-data{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+#info-name{
+    margin-top: 5px;
+}
+
+#Next, #save{
+    align-items: center;
+    display: flex;
+}
+
+
+#Next{
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+
+}
+
+#save{
+    margin-top: 10px;
+}
+
+.suggestion-box{
+    display: flex;
+    height: 90%;
+    width: 98%;
+    background: wheat;
+    margin: 5px;
+    margin-top: 10px;
+
+}
