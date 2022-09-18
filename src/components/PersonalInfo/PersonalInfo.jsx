@@ -1,7 +1,7 @@
 import "./PersonalInfo.css"
 import "../All Css/Button.css"
 import "../All Css/Input.css"
-import { Link } from "react-router-dom"
+import { Link,   } from "react-router-dom"
 
 function PersonalInfo() {
     return (
@@ -66,7 +66,7 @@ function PersonalInfo() {
                         <div className="suggestion-box">
 
                         </div>
-                    <Link to="./Skills" class="animated-button1" id="Next" type="">
+                    <Link replace to="./Skills" class="animated-button1" id="Next" type="">
                         <span className="span"></span>
                         <span className="span"></span>
                         <span className="span"></span>
