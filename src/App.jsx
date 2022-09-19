@@ -6,6 +6,7 @@ import {gapi} from "gapi-script"
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 // import Switch from "react-router-dom"
 import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 import Projects from "./components/Projects/Projects";
 import Certification from "./components/Certification/Certification";
@@ -58,6 +59,7 @@ function App() {
           {/* </Switch> */}
 
 
+          <Route path='/Contact' element={<Contact/>}></Route>
         </Routes>
       </Router>
 
