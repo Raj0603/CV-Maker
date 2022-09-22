@@ -6,14 +6,27 @@ import { Link } from "react-router-dom"
 function Projects() {
     return (
         <>
-        
-            <div className="heading">
+
+            <div className="pr-heading">
                 Enter Your Project Details
             </div>
             <div className="project-container">
                 <div className="float-child-l">
+                    <div className="pr-suggestion">
+                        <span className="project-titles">Suggestions</span>
+                        <div className="suggestion-box">
 
-                    <div className="temp">
+                        </div>
+                        <button type="" class="animated-button1" id="save">
+                            <span className="span"></span>
+                            <span className="span"></span>
+                            Save
+                            <span className="span"></span>
+                            <span className="span"></span>
+                        </button>
+                    </div>
+
+                    <div className="pr-temp">
 
                     </div>
                 </div>
@@ -53,27 +66,14 @@ function Projects() {
                         </label>
                         {/* <button className="save-changes">Save</button> */}
                         <br />
-                        <button type="" class="animated-button1" id="save">
+                        <Link to="./Education" class="animated-button1" id="Next" type="">
                             <span className="span"></span>
                             <span className="span"></span>
-                             Save
                             <span className="span"></span>
                             <span className="span"></span>
-                        </button>
-                    </div>
+                            Next
+                        </Link>
 
-                    <div className="suggestion">
-                        <span className="project-titles">Suggestions</span>
-                        <div className="suggestion-box">
-
-                        </div>
-                    <Link to="./Education" class="animated-button1" id="Next" type="">
-                        <span className="span"></span>
-                        <span className="span"></span>
-                        <span className="span"></span>
-                        <span className="span"></span>
-                        Next
-                    </Link>
                     </div>
 
                 </div>

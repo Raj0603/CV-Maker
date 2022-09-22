@@ -1,21 +1,17 @@
-.skills-container {
-    display: flex;
-    height: 150vh;
-    width: 100%;
-
+.sk-main{
+    height: 100vh;
 }
 
-.heading {
-    text-align: center;
-    font-size: xxx-large;
-    background: #a7d1d2;
-    font-weight: 500;
+.skills-container {
+    display: flex;
+    /* height: 150vh; */
+    width: 100%;
 }
 
 .float-child-l,
 .float-child-r {
     width: 50%;
-    /* height: 100vh; */
+    height: 92.5vh;
 }
 
 .float-child-l {
@@ -26,13 +22,9 @@
     background-color: #63898c;
 }
 
-.suggestion {
+.sk-suggestion {
     height: 20%;
     width: 100%;
-}
-
-.temp {
-    height: 100%;
 }
 
 .skills-titles {
@@ -51,14 +43,14 @@
 }
 
 .skills-data {
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
-/* 
+
 #skills-name {
     margin-top: 5px;
-} */
+}
 
 #Next,
 #save {
@@ -66,10 +58,17 @@
     display: flex;
 }
 
+.sk-heading{
+    text-align: center;
+    font-size: xx-large;
+    background: #a7d1d2;
+    font-weight: 500;
+}
+
 
 #Next {
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-top: 7px;
 
 }
@@ -80,10 +79,9 @@
 
 .suggestion-box {
     display: flex;
-    height: 90%;
+    height: 60%;
     width: 98%;
     background: wheat;
     margin: 5px;
     margin-top: 10px;
-
 }
