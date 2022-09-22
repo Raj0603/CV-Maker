@@ -1,15 +1,12 @@
-.certification-container {
-    display: flex;
-    height: 110vh;
-    width: 100%;
-
+.ce-main{
+    height: 100vh;
 }
 
-.heading {
-    text-align: center;
-    font-size: xxx-large;
-    background: #a7d1d2;
-    font-weight: 500;
+.certification-container {
+    display: flex;
+    /* height: 110vh; */
+    width: 100%;
+
 }
 
 .float-child-l,
@@ -26,14 +23,11 @@
     background-color: #63898c;
 }
 
-.suggestion {
+.ce-suggestion {
     height: 20%;
     width: 100%;
 }
 
-.temp {
-    height: 100%;
-}
 
 .Certification-titles {
     margin-left: 30px;
@@ -51,14 +45,14 @@
 }
 
 .Certification-data {
-    height: 67%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
-/* 
+
 #Certification-name {
     margin-top: 5px;
-} */
+}
 
 #Next,
 #save {
@@ -66,10 +60,16 @@
     display: flex;
 }
 
+.ce-heading{
+    text-align: center;
+    font-size: xx-large;
+    background: #a7d1d2;
+    font-weight: 500;
+}
 
 #Next {
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-top: 7px;
 
 }

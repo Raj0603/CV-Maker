@@ -170,8 +170,6 @@
 
 
 
-
-
   .jumbotron27 {
     background: url("image.jpg") no-repeat center;
 }
@@ -182,14 +180,21 @@
 
 
 
-  
-
   .container165 {
 	max-width: 750px;
   }
   h5 {
 	font-family: 'Rock Salt', cursive;
   }
-  .p {
-	margin: 25px;
+
+
+  .p4{
+	text-align: center;
+	float: center;
+
+  }
+
+  .random_quote {
+	text-align: left;
+	
   }

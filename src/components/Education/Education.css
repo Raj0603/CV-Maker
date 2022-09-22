@@ -1,15 +1,12 @@
-.education-container {
-    display: flex;
-    height: 150vh;
-    width: 100%;
-
+.ed-main{
+    height: 100vh;
 }
 
-.heading {
-    text-align: center;
-    font-size: xxx-large;
-    background: #a7d1d2;
-    font-weight: 500;
+.education-container {
+    display: flex;
+    /* height: 150vh; */
+    width: 100%;
+
 }
 
 .float-child-l,
@@ -26,7 +23,7 @@
     background-color: #63898c;
 }
 
-.suggestion {
+.ed-suggestion {
     height: 20%;
     width: 100%;
 }
@@ -51,14 +48,14 @@
 }
 
 .education-data {
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
-/* 
+
 #education-name {
     margin-top: 5px;
-} */
+}
 
 #Next,
 #save {
@@ -76,6 +73,13 @@
 
 #save {
     margin-top: 10px;
+}
+
+.ed-heading{
+    text-align: center;
+    font-size: xx-large;
+    background: #a7d1d2;
+    font-weight: 500;
 }
 
 .suggestion-box {
