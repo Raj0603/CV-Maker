@@ -1,10 +1,6 @@
-
-import NavbarA from "../../components/Navbar/NavbarA";
-
+import Navbar from "../../components/Navbar/Navbar";
 import "./Contact.css" ;
-
 import emailjs from "emailjs-com" ;
-
 
 function Contact() {
 
@@ -15,17 +11,15 @@ function Contact() {
     .then(()=>{
         document.write("<h2>Thank You For Sending Us Your Message</h2>");})
         .catch(()=> document.write("<h2>An Error Occured , Please Try Again </h2>"));
-   
     }
-
 
 	return (
         <>
-        <NavbarA />
+        <Navbar />
         <section id="contact">
             <div className="contact-box">
                 <div className="contact-links">
-                    <h2>CONTACT</h2>
+                    <h2 className="heading2">CONTACT</h2>
                     <div className="links">
                   
                     </div>
@@ -33,31 +27,24 @@ function Contact() {
                 <div className="contact-form-wrapper">
                     <form onSubmit={sendEMail}>
                         <div className="form-item">
-                            <input type="text" name="sender" required />
-                                <label>Name:</label>
+                            <input type="text" name="sender" required className="contact-input"/>
+                                <label className="contact-label">Name:</label>
                             </div>
                         <div className="form-item">
-                            <input type="text" name="email" required />
-                                <label>Email:</label>
+                            <input type="text" name="email" required className="contact-input"/>
+                                <label className="contact-label">Email:</label>
                             </div>
                         <div className="form-item">
-                            <textarea className="" name="message" required></textarea>
-                            <label>Message:</label>
+                            <textarea className="contact-textarea" name="message" required></textarea>
+                            <label className="contact-label">Message:</label>
                         </div>
                         <button className="submit-btn">Send</button>
                     </form>
                 </div>
             </div>
-        </section>
-        
+        </section>   
         </>
-       
-
-
-
-
 	);
 }
-
 export default Contact;
 
