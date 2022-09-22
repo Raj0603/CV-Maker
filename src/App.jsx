@@ -4,9 +4,8 @@ import About from "./components/About/About"
 import {useEffect} from "react"
 import {gapi} from "gapi-script"
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-// import Switch from "react-router-dom"
 import Home from './pages/Home/Home';
-import Contact from './pages/Contact/Contact';
+import Contact from './components/Contact/Contact';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 import Projects from "./components/Projects/Projects";
 import Certification from "./components/Certification/Certification";
@@ -39,8 +38,6 @@ function App() {
   
    <Router>
         <Routes>
-          {/* <Switch> */}
-
           <Route path='/' element={<Home/>}></Route>
           <Route path='/Signup' element={<Signup />}></Route>
           <Route path='/Home' element={<Home />}></Route>
@@ -56,9 +53,6 @@ function App() {
           <Route path='/Interest' element={<Interest />}></Route>
           <Route path="/Education/Interest" element={<Navigate replace to="/Interest" />} />
           <Route path='/PersonalInfo' element={<PersonalInfo />}></Route>
-          {/* </Switch> */}
-
-
           <Route path='/Contact' element={<Contact/>}></Route>
         </Routes>
       </Router>

@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import "./Contact.css" ;
 import emailjs from "emailjs-com" ;
 
