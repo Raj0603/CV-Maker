@@ -30,6 +30,11 @@
 	color: var(--textColor);
 }
 
+.logo{
+	height: 4rem;
+	width: 12rem;
+}
+
 .nav .a {
 	margin: 0 1rem;
 	color: var(--textColor);
