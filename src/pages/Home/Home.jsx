@@ -12,9 +12,14 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
 
+	
 	return (
 		<>
-			<Navbar />
+			<Navbar>
+			
+			</Navbar>
+			
+
 
 			<div className="landing-container">
 
@@ -33,7 +38,7 @@ export default function Home() {
 						<h3></h3>
 						<br />
 						<div className="p4" id='random_quote'>
-							<script isHydrating={true} type="text/javascript"
+						 	<script isHydrating={true} type="text/javascript"
 								src={randomQuote} />
 						</div>
 
