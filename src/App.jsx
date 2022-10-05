@@ -1,7 +1,7 @@
 import './App.css';
 import About from "./components/About/About"
 
- import React, { Component, useState } from "react"
+ import React, { Component, createContext, useReducer, useState } from "react"
  import Signup from './components/SignUp/Signup';
 import {useEffect} from "react"
 import {gapi} from "gapi-script"
@@ -16,10 +16,68 @@ import Education from "./components/Education/Education";
 import Interest from "./components/Interest/Interest";
 import Skills from "./components/Skills/Skills";
 import Login from './components/Login/Login';
+import { init } from 'emailjs-com';
 
-const clientId = "416173177198-s29fioc3j8kia1fviqh1j1bbfbldghun.apps.googleusercontent.com"
+import { initialState, reducer } from '../src/reducer/UseReducer';
 
-function App() {
+export const UserContext = createContext();
+
+const Routing = () => {
+  return (
+
+ 
+ 
+
+
+  <>
+  
+
+  
+  <div className="App">
+     
+ <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+      
+        <Route path='/Signup' element={<Signup />}></Route>
+        <Route path='/Login' element={<Login />}></Route>
+        
+        <Route path='/Home' element={<Home />}></Route>
+        <Route path='/About' element={<About />}></Route>
+        <Route path='/Skills' element={<Skills />}></Route>
+        <Route path="/PersonalInfo/Skills" element={<Navigate replace to="/Skills" />} />
+        <Route path='/Certification' element={<Certification />}></Route>
+        <Route path="/Skills/Certification" element={<Navigate replace to="/Certification" />} />
+        <Route path='/Projects' element={<Projects />}></Route>
+        <Route path="/Certification/Projects" element={<Navigate replace to="/Projects" />} />
+        <Route path='/Education' element={<Education />}></Route>
+        <Route path="/Projects/Education" element={<Navigate replace to="/Education" />} />
+        <Route path='/Interest' element={<Interest />}></Route>
+        <Route path="/Education/Interest" element={<Navigate replace to="/Interest" />} />
+        <Route path='/PersonalInfo' element={<PersonalInfo />}></Route>
+        <Route path='/Contact' element={<Contact/>}></Route>
+        
+     
+{/* 
+        <Route path="/Signup">
+          <Signup setLoginUser={setLoginUser}/>
+        </Route>
+
+        <Route path="/Signup">
+          <Signup />
+        </Route> */}
+     
+        </Routes>
+    </Router>
+
+    </div>
+    </>
+    )
+    }
+
+
+
+
 
   // const [ user,setLoginUser ] = useState({})
   // useEffect(() => {
@@ -34,56 +92,32 @@ function App() {
 
   // });
 
-  const user = localStorage.getItem("token");
 
-  return (
+     
 
-    <>
+   
+  const App = () => {
+
+  const [state,dispatch] = useReducer(reducer,initialState);
 
     
-    <div className="App">
-  
-   <Router>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          {user && <Route path="/" exact element={<Home />} />}
-          <Route path='/Signup' element={<Signup />}></Route>
-          <Route path='/Login' element={<Login />}></Route>
-          
-          <Route path='/Home' element={<Home />}></Route>
-          <Route path='/About' element={<About />}></Route>
-          <Route path='/Skills' element={<Skills />}></Route>
-          <Route path="/PersonalInfo/Skills" element={<Navigate replace to="/Skills" />} />
-          <Route path='/Certification' element={<Certification />}></Route>
-          <Route path="/Skills/Certification" element={<Navigate replace to="/Certification" />} />
-          <Route path='/Projects' element={<Projects />}></Route>
-          <Route path="/Certification/Projects" element={<Navigate replace to="/Projects" />} />
-          <Route path='/Education' element={<Education />}></Route>
-          <Route path="/Projects/Education" element={<Navigate replace to="/Education" />} />
-          <Route path='/Interest' element={<Interest />}></Route>
-          <Route path="/Education/Interest" element={<Navigate replace to="/Interest" />} />
-          <Route path='/PersonalInfo' element={<PersonalInfo />}></Route>
-          <Route path='/Contact' element={<Contact/>}></Route>
-          
-       
-{/* 
-          <Route path="/Signup">
-            <Signup setLoginUser={setLoginUser}/>
-          </Route>
 
-          <Route path="/Signup">
-            <Signup />
-          </Route> */}
-       
-          </Routes>
-      </Router>
+    return (
+        
+      
+        <>
+        <UserContext.Provider value={{state,dispatch}}>
+          <Routing/>
+      </UserContext.Provider>
 
-           
-
-      </div>
       
       </>
   );
-}
+    }
+
+
+
+
+// change here up
 
 export default App;

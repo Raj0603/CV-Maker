@@ -235,3 +235,7 @@
 	text-align: left;
 	
   }
+
+  #logout{
+	display: none;
+  }

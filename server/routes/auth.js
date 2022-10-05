@@ -12,19 +12,19 @@ router.post("/", async (req, res) => {
 		// change to username
             const user = await User.findOne({ userName: req.body.userName });
 		if (!user)
-			return res.status(401).send({ message: "Invalid Username or Password" });
+			return res.status(401).send({ message: "Following user doesn't exist" });
 
 		const validPassword = await bcrypt.compare(
 			req.body.password,
 			user.password
 		);
 		if (!validPassword)
-			return res.status(401).send({ message: "Invalid Password" });
+			return res.status(401).send({ message: "Invalid Username or Password" });
 
 		const token = user.generateAuthToken();
-		res.status(200).send({ data: token, message: "logged in very well" });
+		res.status(200).send({ data: token, message: "You are now logged in ,Press OK to continue" });
 	} catch (error) {
-		res.status(500).send({ message: "Internal  Error" });
+		res.status(500).send({ message: "Login Failed , Try again" });
 	}
 });
 
