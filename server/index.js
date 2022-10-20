@@ -18,4 +18,4 @@ app.use("/admins/users", userRoutes);
 app.use("/admins/auth", authRoutes);
 
 const port = process.env.PORT || 4000;
-app.listen(4000, () =>  console.log(`server is on bitch on ${port}`))
+app.listen(4000, () =>  console.log(`server is  on ${port}`))

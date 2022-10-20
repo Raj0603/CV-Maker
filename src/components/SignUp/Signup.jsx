@@ -32,7 +32,7 @@ function Signup() {
 
     const onSuccess = (res) => {
         console.log("Login Success! Current user: ", res.profileObj)
-        navigate("/");
+     
     }
 
     const onFailure = (res) => {
@@ -63,7 +63,7 @@ function Signup() {
 			const url = "http://localhost:4000/admins/users";
 			const { data: res } = await axios.post(url, data);
 			navigate("/Login");
-			console.log(res.message);
+			alert(res.message);
 		} catch (error) {
 			if (
 				error.response &&
@@ -152,7 +152,7 @@ function Signup() {
                     </div>
 
                     <input type="submit" className="btn" value="Sign up" onSubmit={handleSubmit} />
-                    {error && <div className="error_msg"><h4>{error}</h4></div>}
+                    {error && <div className="error_msg" style={{color:"Red"}}><h5>{error}</h5></div>}
 
                     <p className="social-text">Or Sign up with social platforms</p>
                     <div className="social-media">
