@@ -38,7 +38,7 @@ function Navbar() {
 			<img src={logo} alt="" className="logo" />
 			<nav className="nav" ref={navRef}>
 				<a className="a" href="/#">Home</a>
-				<a className="a" href="/#">Build CV</a>
+				<Link to="/Body"><a className="a" href="/#">Build CV</a> </Link>
 				<Link className="a" to="/About">About Us</Link>
 				<Link className="a" to="/Contact">
 					Contact Us</Link>

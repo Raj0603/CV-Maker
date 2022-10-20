@@ -29,7 +29,7 @@ export default function Home() {
 					<h1 className="landing-h1">The Best Solution for Your Career Establishment </h1><br />
 					<p className="landing-text" style={{textAlign: "center"}}>We help you maximize Your Static performance and build a healthy Resume</p>
 					<br /><br />
-					<Link to="./PersonalInfo" href="#" role="button"><button className="landing-button"> Start Building</button></Link>
+					<Link to="/Body" href="#" role="button"><button className="landing-button"> Start Building</button></Link>
 				</div>
 				<div className="landing-quote">
 					<h2 style={{ textAlign: "center", justifyContent: "center" }}>Momentary Quote</h2>
